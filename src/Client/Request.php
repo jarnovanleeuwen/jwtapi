@@ -1,0 +1,40 @@
+<?php
+namespace JwtApi\Client;
+
+abstract class Request
+{
+    /**
+     * @var array|null
+     */
+    protected $parameters;
+
+    /**
+     * @var string|null
+     */
+    protected $payload;
+
+    /**
+     * Extra request options that are used by Guzzle when sending the request.
+     *
+     * @var array|null
+     */
+    protected $requestOptions;
+
+    public function getParameters(): ?array
+    {
+        return $this->parameters;
+    }
+
+    public function getPayload(): ?string
+    {
+        return $this->payload;
+    }
+
+    public function getRequestOptions(): ?array
+    {
+        return [];
+    }
+
+    abstract public function getMethod(): string;
+    abstract public function getUri(): string;
+}

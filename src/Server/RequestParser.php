@@ -39,7 +39,7 @@ class RequestParser
     private $publicKeyResolver;
 
     /**
-     * TIll how long after issuance are tokens expected.
+     * Expiration time of tokens.
      *
      * @var int in seconds
      */
@@ -69,7 +69,7 @@ class RequestParser
     /**
      * @throws RequestException
      */
-    public function setRequest(Request $request, $headerName = Client::HEADER_API_KEY): void
+    public function setRequest(Request $request, string $headerName = Client::HEADER_API_KEY): void
     {
         $this->request = $request;
         $this->apiKey = static::extractApiKey($request, $headerName);

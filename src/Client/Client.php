@@ -10,8 +10,7 @@ use JwtApi\Client\Exceptions\RequestException;
 
 class Client
 {
-    const CLIENT = 'JwtApi/PHP';
-    const VERSION = 0.1;
+    const VERSION = '0.1.1';
     const DEFAULT_HASH_ALGORITHM = 'RS256';
     const HEADER_API_KEY = 'API-Key';
 
@@ -101,7 +100,8 @@ class Client
         $options = [
             RequestOptions::HEADERS => [
                 static::HEADER_API_KEY => $this->apiKey,
-                'Authorization' => "Bearer {$this->createAccessToken()}"
+                'Authorization' => "Bearer {$this->createAccessToken()}",
+                'Accept' => 'application/json'
             ]
         ];
 
@@ -113,9 +113,12 @@ class Client
             $options[RequestOptions::JSON] = $payload;
         }
 
-        return array_merge($options, $request->getRequestOptions());
+        return array_merge_recursive($options, $request->getRequestOptions());
     }
 
+    /**
+     * @throws RequestException
+     */
     public function send(Request $request): Response
     {
         try {
@@ -137,6 +140,6 @@ class Client
 
     public static function version(): string
     {
-        return static::CLIENT.'/'.static::VERSION;
+        return 'JwtApi/'.self::VERSION;
     }
 }

@@ -10,7 +10,7 @@ use JwtApi\Client\Exceptions\RequestException;
 
 class Client
 {
-    const VERSION = '0.1.1';
+    const VERSION = '0.2.0';
     const DEFAULT_HASH_ALGORITHM = 'RS256';
     const HEADER_API_KEY = 'API-Key';
 
@@ -128,11 +128,7 @@ class Client
                 $this->getRequestOptions($request)
             );
 
-            if (($statusCode = $response->getStatusCode()) >= 200 && $statusCode < 300) {
-                return new Response($response);
-            }
-
-            throw new RequestException($response->getBody());
+            return new Response($response);
         } catch (ClientException $exception) {
             throw new RequestException($exception->getMessage());
         }

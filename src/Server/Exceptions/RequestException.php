@@ -31,7 +31,7 @@ class RequestException extends ServerException
         return new static($message, static::MISSING_BEARER_TOKEN);
     }
 
-    public static function unresolvedPublicKey(string $message = "Could not resolve public key"): self
+    public static function unresolvedPublicKey(string $message = "Invalid API key"): self
     {
         return new static($message, static::UNRESOLVED_PUBLIC_KEY);
     }

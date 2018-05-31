@@ -9,7 +9,7 @@ abstract class Request
     protected $parameters;
 
     /**
-     * @var string|null
+     * @var array|null
      */
     protected $payload;
 
@@ -25,7 +25,7 @@ abstract class Request
         return $this->parameters;
     }
 
-    public function getPayload(): ?string
+    public function getPayload(): ?array
     {
         return $this->payload;
     }

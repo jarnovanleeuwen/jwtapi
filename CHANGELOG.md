@@ -20,4 +20,4 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [0.1.0] - 2018-05-29
 ### Added
-- Initial implementation of the Tikkie API.
+- Initial implementation of JWT API.

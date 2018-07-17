@@ -10,7 +10,7 @@ use JwtApi\Client\Exceptions\RequestException;
 
 class Client
 {
-    const VERSION = '0.3.0';
+    const VERSION = '0.3.1';
     const DEFAULT_HASH_ALGORITHM = 'RS256';
     const HEADER_API_KEY = 'API-Key';
 

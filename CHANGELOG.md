@@ -6,6 +6,11 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+
+## [0.3.4] - 2019-04-05
+### Fixed
+- `getClaims` is now actually returning the claims instead of always an empty array.
+
 ## [0.3.3] - 2019-04-05
 ### Added
 - Getters the private key and hash algorithm.

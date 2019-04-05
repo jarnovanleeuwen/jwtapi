@@ -79,7 +79,7 @@ class Client
 
     public function getClaims(): array
     {
-        return [];
+        return $this->claims;
     }
 
     public function setClaims(array $claims): void

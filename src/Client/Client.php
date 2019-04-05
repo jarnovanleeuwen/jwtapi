@@ -57,9 +57,14 @@ class Client
         ]));
     }
 
-    protected function setHttpClient(HttpClient $httpClient): void
+    public function getApiUrl(): string
     {
-        $this->httpClient = $httpClient;
+        return $this->apiUrl;
+    }
+
+    public function getApiKey(): string
+    {
+        return $this->apiKey;
     }
 
     public function getClaims(): array
@@ -70,6 +75,11 @@ class Client
     public function setClaims(array $claims): void
     {
         $this->claims = $claims;
+    }
+
+    public function setHttpClient(HttpClient $httpClient): void
+    {
+        $this->httpClient = $httpClient;
     }
 
     public function loadPrivateKey(string $path, string $hashAlgorithm = self::DEFAULT_HASH_ALGORITHM): void

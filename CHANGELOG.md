@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [0.3.3] - 2019-04-05
+### Added
+- Getters the private key and hash algorithm.
+
 ## [0.3.2] - 2019-04-05
 ### Added
 - Getters for the `Client` constructor parameters to ease testing.

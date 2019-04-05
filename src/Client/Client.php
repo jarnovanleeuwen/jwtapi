@@ -30,7 +30,7 @@ class Client
     private $claims;
 
     /**
-     * @var string
+     * @var string|null
      */
     private $hashAlgorithm;
 
@@ -40,7 +40,7 @@ class Client
     private $httpClient;
 
     /**
-     * @var string
+     * @var string|null
      */
     private $privateKey;
 
@@ -65,6 +65,16 @@ class Client
     public function getApiKey(): string
     {
         return $this->apiKey;
+    }
+
+    public function getPrivateKey(): ?string
+    {
+        return $this->privateKey;
+    }
+
+    public function getHashAlgorithm(): ?string
+    {
+        return $this->hashAlgorithm;
     }
 
     public function getClaims(): array

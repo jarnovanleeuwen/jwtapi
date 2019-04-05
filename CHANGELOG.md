@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [0.3.2] - 2019-04-05
+### Added
+- Getters for the `Client` constructor parameters to ease testing.
+
 ## [0.3.1] - 2018-07-17
 ### Changed
 - Allow Symfony 4 dependency.

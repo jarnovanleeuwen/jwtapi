@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [0.4.1] - 2022-09-09
+### Changed
+- Allow Symfony 6 dependency.
+
 ## [0.4.0] - 2020-12-28
 ### Changed
 - Support for PHP 8 and require Guzzle 7.
